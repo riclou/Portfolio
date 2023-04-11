@@ -1,0 +1,299 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.default-h1{
+  text-align: center;
+  font-family: 'Alkatra', cursive;
+  font-size: 2.5rem;
+}
+.title-word {
+  animation: color-animation 4s infinite ease-in;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #B4E33D;
+  --color-3: #17494D;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #1C77C3;
+  --color-3: #E54B4B;
+
+}
+
+.title-word-3 {
+  --color-1: #1C77C3;
+  --color-2: #FBAF00;
+  --color-3: #5EEB5B;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes shimmy {
+  0% {
+    transform: translate(0, 0);    
+  }
+  100% {
+    transform: translate(20px, 50px);
+  }
+}
+#menu {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-right: 4rem;
+  align-items: center;
+}
+#menu a {
+  display: block;
+  padding: 0.5rem;
+  color: var(--words);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: inline-block;
+  position: relative;
+}
+#menu a:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#menu a:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@media (max-width: 750px) {
+  .hello{
+    margin: auto;
+    text-align: center;
+  }
+  .main{
+    height: 30vh;
+  }
+  .work{
+    display: none;
+  }
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.proj-img{
+  background-position: center center;
+  background-size: cover;
+  padding: auto;
+}
+.div-projects{
+  margin: 3rem;
+  background-color: var(--modal);
+  text-align: center;
+  font-family:var(--paragraph);
+  color: var(--words);
+  outline: none;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  transition: 0.2s ease-in;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  max-width: 30rem;
+}
+@media (max-width: 500px) {
+  .proj-img{
+    display: none;
+  }
+}
+
+.close{
+  display: none;
+}
+.fa-regular{
+  cursor: pointer;
+}
+.description{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--words);
+  margin-top: 0.6rem;
+  text-align: justify;
+  text-indent: 0.7rem;
+}
+.description-link{
+  text-decoration: underline;
+}
+.js{
+  color: rgb(255, 217, 0);
+}
+.css{
+  color: rgb(0, 119, 255);
+}
+.html{
+  color: tomato;
+}
+.api{
+  color:crimson;
+}
+.all-projects{
+  margin-top: 0.9rem;
+}
+.div-projects:hover{
+  transform: translateY(0) scale(1.05);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.div-projects a{
+  color: var(--words);
+  margin: 10px;
+}
+.div-projects a:hover{
+  color:var(--hover);
+}
+.container img{
+  height: 35vh;
+  width: 50vh;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 5px;
+  outline: none;
+}
+.fa-link{
+  font-size: 15px;
+  margin: 10px;
+}
+#skills{
+  margin-bottom: 10rem;
+}
+.flip-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.flip-card {
+  margin: 5rem;
+  margin-bottom: 5rem;
+  background-color: transparent;
+  height: 350px;
+  width: 300px;
+  border: 3px solid var(--hover);
+  perspective: 1000px;
+  
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color: var(--backgroundHeader);
+  color: black;
+  height: 100%;
+}
+.flip-card-back {
+  background-color: #004743;
+  font-family: var(--paragraph);
+  transform: rotateY(180deg);
+  color: wheat;
+  height: 100%;
+  width: 100%;
+}
+.flip-card-back p, h1{
+  margin: 20px;
+  font-size: 1.3rem;
+}
+.flip-card-back h1{
+  text-decoration: underline;
+  font-weight: bolder;
+}
+.flip-card-front h1{
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: var(--title);
+  letter-spacing: 2px;
+}
+.img-skills{
+  height: 15rem;
+}
+.box-contact{
+  display:flex;
+  justify-content: center;
+  margin: 3rem;
+}
+.email{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--button);
+  padding: 20px;
+  border-radius: 5px 0 0 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.email p{
+color: var(--words);
+font-family: var(--paragraph);
+}
+.fa-brands{
+  cursor: pointer;
+  color: var(--words);
+  font-size: 2rem;
+}
+.icons-img{
+  height: 3rem;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.icons-img:hover{
+  transform: translateY(10px);
+
+}
+.links-contact{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 5rem;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(132, 255, 201, 1);
+  border-radius: 3px;
+}
