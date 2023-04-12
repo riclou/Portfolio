@@ -3,9 +3,12 @@
     
 }
 .carousel-caption{
-    background-color: rgb(214, 198, 179);
+    background-color: rgba(22, 22, 21, 0.897);
     padding: 2rem;
     border-radius: 8px
+}
+.carousel-caption h5, .carousel-caption p{
+    color: #fff;
 }
 .carousel-inner .carousel-item img {
     max-width: 100%;
