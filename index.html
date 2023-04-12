@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d349635840.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <title>Portfolio</title>
+    <title>Ricardo</title>
 </head>
 <link rel="stylesheet" href="./style/Header.css">
 <link rel="stylesheet" href="./style/index.css">
@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="./style/AboutMe.css">
 <link rel="stylesheet" href="./style/Projects.css">
 <link rel="stylesheet" href="./style/Qualification.css">
+<link rel="stylesheet" href="./style/Skills.css">
 
 <script src="index.js" defer></script>
 <body id="body">
@@ -43,16 +44,17 @@
   <header class="fixed-top">
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img id="logo" src="./img/logo.jpg"/></a>
+        <a class="navbar-brand" href="#topo"><img id="logo" src="./img/logo.jpg"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto"> <!-- Use a classe 'ms-auto' para alinhar à direita -->
-            <a class="nav-link" href="#hello">Sobre mim</a>
-            <a class="nav-link" href="#">Projetos</a>
-            <a class="nav-link" href="#">Skills</a>
-            <a class="nav-link" href="#">Contatos</a>
+            <a class="nav-link" href="#sobremim">Sobre mim</a>
+            <a class="nav-link" href="#certificados">Certificações</a>
+            <a class="nav-link" href="#projetos">Projetos</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#contatos">Contatos</a>
           </div>
         </div>
       </div>
@@ -61,12 +63,12 @@
   
     <!-- Menu inicial -->
 
-    <section class="main content">
+    <section id="topo" class="main content">
         <div class="hello">
             <h2 class="title-word title-word-1">Olá, sejá bem vindo</h1>
             <h2 class="title-word title-word-2">Eu sou Ricardo</h2>
             <h2 class="title-word title-word-3">Desenvolvedor Front-End</p>
-            <a href="#projects"><button id="portfolio">Conheça meu Portfólio</button></a>
+            <a href="#projetos"><button id="portfolio">Conheça meu Portfólio</button></a>
         </div>
         <div>
             <img class="work" src="img/work.jpg" alt="work-person">
@@ -75,7 +77,7 @@
 
     <!-- Sobre mim -->
 
-    <section class="about-me">
+    <section id="sobremim" class="about-me">
       <h2 class="default-h1">Sobre mim</h1>
       <div class="box-about">
         <img src="https://avatars.githubusercontent.com/u/51518580?v=4" alt="perfil image">
@@ -98,7 +100,7 @@
     
     <!-- Certificados -->
     
-    <section class="certificate">
+    <section id="certificados" class="certificate">
       <h2 class="default-h1">Qualificações</h2>
       <div class="qualification">
         <div class="card">
@@ -149,13 +151,13 @@
           </div>
         </div>
       </div>
-      <button type="button" class="btn btn-info">Ver mais</button>
-      <button type="button" class="btn btn-info off">Ver menos</button>
+      <button type="button" class="btn btn-info on">Ver mais</button>
+      <button type="button" class="btn btn-info off" style="display: none;">Ver menos</button>
     </section>
     
     <!-- Projetos -->
 
-    <div class="container">
+    <section id="projetos" class="container">
       <h2 class="default-h1">Projetos</h2>
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-theme="dark" data-bs-ride="carousel" data-bs-interval="3000">
         
@@ -199,10 +201,65 @@
           <span class="visually-hidden">Next</span>
         </a>
       </div>
-    </div>
+    </section>
 
+    <section id="skills" class="skills">
+      <h2 class="default-h1">Skills</h2>
+      <div class="container-skills">
 
-    <section class="contacts">
+        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+          <img src="./img/technologies/html.png" alt="html-logo">
+          <div class="block-container">
+            <p>HTML (Hypertext Markup Language): É uma linguagem de marcação usada para criar páginas web. É a espinha dorsal de qualquer site e é usada para estruturar o conteúdo e definir elementos como títulos, parágrafos, imagens, links, formulários, entre outros.</p>
+          </div>
+        </div>
+
+        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+          <img src="./img/technologies/css.png" alt="css-logo">
+          <div class="block-container">
+            <p>CSS (Cascading Style Sheets): É uma linguagem de estilo usada para controlar a aparência de páginas web. É usada para definir a aparência de elementos HTML, como cores, fontes, margens, tamanhos, layout e efeitos visuais.</p>
+          </div>
+        </div>
+
+        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+          <img src="./img/technologies/js.png" alt="js-logo">
+          <div class="block-container">
+              <p>JavaScript: É uma linguagem de programação amplamente usada para adicionar interatividade e funcionalidade dinâmica a páginas web. É uma linguagem de script que permite a manipulação de elementos HTML, interação do usuário, animações, validação de formulários, acesso a APIs, entre outras funcionalidades.</p>
+          </div>
+        </div>
+        
+        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+          <img src="./img/technologies/git.png" alt="git-logo">
+          <div class="block-container">
+            <p>Git: É um sistema de controle de versão distribuído amplamente utilizado para o gerenciamento de código fonte. Ele permite que os desenvolvedores acompanhem as mudanças em seus arquivos de código, trabalhem em equipe, mesclam e compartilhem código de forma eficiente e revertam alterações se necessário.</p>
+          </div>
+        </div>
+
+        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+          <img src="./img/technologies/react.png" alt="react-logo">
+          <div class="block-container">
+            <p>React: É uma biblioteca de JavaScript para a criação de interfaces de usuário (UI) interativas e reativas. É uma ferramenta popular para o desenvolvimento de aplicações web de página única (SPA), onde as atualizações na interface do usuário são feitas de forma eficiente sem recarregar a página inteira.</p>
+          </div>
+        </div>
+
+        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+          <img src="./img/technologies/node.png" alt="node-logo">
+          <div class="block-container">
+            <p>Node.js: É um ambiente de tempo de execução JavaScript do lado do servidor, construído sobre o motor de JavaScript V8 do Google Chrome. Ele permite que os desenvolvedores usem JavaScript para criar aplicativos de servidor, lidar com solicitações HTTP, gerenciar arquivos, bancos de dados, realizar operações assíncronas e muito mais.</p>
+          </div>
+        </div>
+
+        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+          <img src="./img/technologies/bootstrap.png" alt="node-logo">
+          <div class="block-container">
+            <p>Bootstrap: É um framework de código aberto amplamente usado para o desenvolvimento de interfaces web responsivas e estilizadas. Ele fornece uma coleção de estilos, componentes e utilitários pré-projetados que facilitam a criação de páginas web modernas e visualmente atraentes.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer id="contatos" class="contacts">
       <h2 id="contacts" class="default-h1">Contatos</h1>
       <div class="box-contact">
           <div class="email">
@@ -217,9 +274,9 @@
           </div>
       </div>
       <nav class="links-contact">
-        <a href="https://www.linkedin.com/in/claudio-ricardo-silva-rego-758550221/" target="_blank"><img class="icons-img" src="img/linkedin.png" alt="linkedin-icon"></a>
-        <a href="https://github.com/riclou" target="_blank"><img class="icons-img"  src="img/github.png" alt="github-icon"></a>
+        <a href="https://www.linkedin.com/in/claudio-ricardo-silva-rego-758550221/" target="_blank"><img class="icons-img" src="./img/linkedin.png" alt="linkedin-icon"></a>
+        <a href="https://github.com/riclou" target="_blank"><img class="icons-img"  src="./img/github.png" alt="github-icon"></a>
       </nav>
-    </section>
+    </footer>
   </body>
   </html>

@@ -1,0 +1,29 @@
+.container-skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 5rem;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+.container-skills img{
+    height: 4rem;
+}
+.block-container{
+    padding: 1rem;
+    border: 3px solid #1C77C3;
+    max-width: 20rem;
+    z-index: 2;
+    position: absolute;
+    border-radius: 20px;
+    background-color: rgba(49, 52, 53, 0.808);
+}
+.block-container p {
+    text-align: left;
+    text-indent: 12px;
+    color: #fff;
+}
+.none div{
+    display: none;
+}

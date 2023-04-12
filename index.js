@@ -1,19 +1,31 @@
-const button = document.querySelector(".btn-info")
 const show = document.querySelector(".see-more")
+const on = document.querySelector(".on")
+const off = document.querySelector(".off")
 
-button.addEventListener("click", () =>{
+on.addEventListener("click", () =>{
   if(show.style.display = "none"){
+    on.style.display = "none"
+    off.style.display = "block"
     show.style.display = "flex"
-    button.textContent = "Mostrar menos"
   }
 })
 
-button.addEventListener("click", () =>{
+off.addEventListener("click", () =>{
   if(show.style.display = "flex"){
+    on.style.display = "block"
+    off.style.display = "none"
     show.style.display = "none"
-    button.textContent = "Ver mais"
   }
-  })
+})
+
+function createMouse(event){
+  event.children[1].style.display = "block"
+}
+
+function deleteMouse(event){
+  event.children[1].style.display = "none"
+}
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
