@@ -60,6 +60,15 @@ section{
     transform: translate(20px, 50px);
   }
 }
+@media (max-width: 750px) {
+  .hello{
+    margin: 2.5rem auto 0 auto;
+    text-align: center;
+  }
+  .work{
+    display: none;
+  }
+}
 .to-top {
   background: #25283D;
   position: fixed;
