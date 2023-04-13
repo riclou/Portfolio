@@ -62,7 +62,7 @@ section{
 }
 @media (max-width: 750px) {
   .hello{
-    margin: 2.5rem auto 0 auto;
+    margin: auto;
     text-align: center;
   }
   .work{
