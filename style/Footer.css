@@ -1,0 +1,19 @@
+.nav-footer{
+    background-color: #2B3035;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+.nav-footer div{
+    margin: 0.5rem;
+}
+.social-links{
+    display: flex;
+    gap: 10px;
+}
+.footer-content p{
+    margin-bottom:0 ;
+    user-select: none;
+}

@@ -11,6 +11,14 @@
     border: 2px solid #1C77C3;
     margin: 2rem 2rem;
 }
+@media (max-width:300px) {
+    .card-body a{
+        display: none;
+    }
+    .card{
+        height: auto;
+    }
+}
 .card-body p{
     font-size: 1rem;
     font-family:sans-serif;

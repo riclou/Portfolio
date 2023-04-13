@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="./style/Projects.css">
 <link rel="stylesheet" href="./style/Qualification.css">
 <link rel="stylesheet" href="./style/Skills.css">
+<link rel="stylesheet" href="./style/Footer.css">
 
 <script src="index.js" defer></script>
 <body id="body">
@@ -39,6 +40,10 @@
     }
   </style>
 
+  <a href="#topo" class="to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
   <!-- HEADER -->
 
   <header class="fixed-top">
@@ -54,7 +59,6 @@
             <a class="nav-link" href="#certificados">Certificações</a>
             <a class="nav-link" href="#projetos">Projetos</a>
             <a class="nav-link" href="#skills">Skills</a>
-            <a class="nav-link" href="#contatos">Contatos</a>
           </div>
         </div>
       </div>
@@ -94,7 +98,7 @@
         </div>
       </div>
       <div class="curriculum">
-        <a href="document/Claudio Ricardo - Curriculo.pdf"><button>Currículo</button></a>
+        <a target="_blank" href="document/Claudio Ricardo - Curriculo.pdf"><button>Currículo</button></a>
       </div> 
     </section>
     
@@ -203,79 +207,64 @@
       </div>
     </section>
 
-    <section id="skills" class="skills">
+    <section id="skills">
       <h2 class="default-h1">Skills</h2>
+
       <div class="container-skills">
 
-        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+        <div title="Html5" class="skills">
           <img src="./img/technologies/html.png" alt="html-logo">
-          <div class="block-container">
-            <p>HTML (Hypertext Markup Language): É uma linguagem de marcação usada para criar páginas web. É a espinha dorsal de qualquer site e é usada para estruturar o conteúdo e definir elementos como títulos, parágrafos, imagens, links, formulários, entre outros.</p>
-          </div>
         </div>
 
-        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+        <div title="Css3" class="skills">
           <img src="./img/technologies/css.png" alt="css-logo">
-          <div class="block-container">
-            <p>CSS (Cascading Style Sheets): É uma linguagem de estilo usada para controlar a aparência de páginas web. É usada para definir a aparência de elementos HTML, como cores, fontes, margens, tamanhos, layout e efeitos visuais.</p>
-          </div>
         </div>
 
-        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+        <div title="Java-Script" class="skills">
           <img src="./img/technologies/js.png" alt="js-logo">
-          <div class="block-container">
-              <p>JavaScript: É uma linguagem de programação amplamente usada para adicionar interatividade e funcionalidade dinâmica a páginas web. É uma linguagem de script que permite a manipulação de elementos HTML, interação do usuário, animações, validação de formulários, acesso a APIs, entre outras funcionalidades.</p>
-          </div>
         </div>
         
-        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+        <div title="Git" class="skills">
           <img src="./img/technologies/git.png" alt="git-logo">
-          <div class="block-container">
-            <p>Git: É um sistema de controle de versão distribuído amplamente utilizado para o gerenciamento de código fonte. Ele permite que os desenvolvedores acompanhem as mudanças em seus arquivos de código, trabalhem em equipe, mesclam e compartilhem código de forma eficiente e revertam alterações se necessário.</p>
-          </div>
         </div>
 
-        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+        <div title="React" class="skills">
           <img src="./img/technologies/react.png" alt="react-logo">
-          <div class="block-container">
-            <p>React: É uma biblioteca de JavaScript para a criação de interfaces de usuário (UI) interativas e reativas. É uma ferramenta popular para o desenvolvimento de aplicações web de página única (SPA), onde as atualizações na interface do usuário são feitas de forma eficiente sem recarregar a página inteira.</p>
-          </div>
         </div>
 
-        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+        <div title="Node.js" class="skills">
           <img src="./img/technologies/node.png" alt="node-logo">
-          <div class="block-container">
-            <p>Node.js: É um ambiente de tempo de execução JavaScript do lado do servidor, construído sobre o motor de JavaScript V8 do Google Chrome. Ele permite que os desenvolvedores usem JavaScript para criar aplicativos de servidor, lidar com solicitações HTTP, gerenciar arquivos, bancos de dados, realizar operações assíncronas e muito mais.</p>
-          </div>
         </div>
 
-        <div onmouseover="createMouse(this)" onmouseout="deleteMouse(this)" class="none">
+        <div title="Bootstrap" class="skills">
           <img src="./img/technologies/bootstrap.png" alt="node-logo">
-          <div class="block-container">
-            <p>Bootstrap: É um framework de código aberto amplamente usado para o desenvolvimento de interfaces web responsivas e estilizadas. Ele fornece uma coleção de estilos, componentes e utilitários pré-projetados que facilitam a criação de páginas web modernas e visualmente atraentes.</p>
-          </div>
         </div>
-
+        
       </div>
+
     </section>
 
-    <footer id="contatos" class="contacts">
-      <h2 id="contacts" class="default-h1">Contatos</h1>
-      <div class="box-contact">
-          <div class="email">
-            <a target="_blank" href="mailto:claudioricardo1806@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-            <p>claudioricardo1806@gmail.com</p>
-          </div>
-      </div>
-        <div class="box-contact">
-          <div class="email">
-            <a target="_blank" href="https://wa.me/5511954782731?text=Ol%C3%A1"><i class="fa-brands fa-whatsapp"></i></a>
-            <p>(11) 95478-2731</p>
-          </div>
-      </div>
-      <nav class="links-contact">
-        <a href="https://www.linkedin.com/in/claudio-ricardo-silva-rego-758550221/" target="_blank"><img class="icons-img" src="./img/linkedin.png" alt="linkedin-icon"></a>
-        <a href="https://github.com/riclou" target="_blank"><img class="icons-img"  src="./img/github.png" alt="github-icon"></a>
+    <footer>
+      <nav class="nav-footer" data-bs-theme="dark">
+
+        <div class="footer-content"> 
+          <p style="color: #fff;">Designed and Developd by Ricardo</p>
+        </div>
+
+        <div class="footer-content">
+          <p style="color: #fff">Copyright ₢ 2023 Ricardo</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/claudio-ricardo-silva-rego-758550221/" target="_blank"><img src="./img/linkedin.png" alt="linkedin" width="30" height="30" class="d-inline-block align-text-right"></a>
+
+            <a href="https://github.com/riclou" target="_blank"><img src="./img/github.png" alt="github" width="30" height="30" class="d-inline-block align-text-top"></a>
+
+            <a target="_blank" href="mailto:claudioricardo1806@gmail.com"><img width="30" height="30" src="./img/mail.png" alt="mail"></a>
+
+            <a target="_blank" href="https://wa.me/5511954782731?text=Ol%C3%A1"><img width="30" height="30" src="./img/whatsapp.png" alt="wpp"></a>
+        </div>
+
       </nav>
     </footer>
   </body>
